@@ -1,3 +1,23 @@
 <h1>Home Route</h1>
 
-<p><%= @hello %></p>
+<br></br>
+
+
+<%#= @coins["2"]["name"] %><br>
+<%#= @coins["2"]["quotes"]["USD"]["price"].round(2) %>
+
+<% if @coins %>
+    <% @coins.each do |val| %>
+        <%= val[1]["rank"] %> .
+        <%= val[1]["name"] %> :
+        $<%= val[1]["quotes"]["USD"]["price"].round(2) %><br><br>
+    <% end %>
+<% end %>
+
+
+
+
+
+
+
+

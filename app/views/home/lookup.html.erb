@@ -1,0 +1,18 @@
+<h3>Crypto Curreny Lookup</h3>
+
+<%= form_tag home_lookup_path, :method => 'POST' do %>
+    <%= text_field_tag 'sym', nil, placeholder: 'Enter Crypto Symbol', size: 50 %>
+    <%= submit_tag 'Lookup Crypto Curreny Quote' %><br><br>
+<% end %>
+
+<%#= @symbol %>
+
+<% if @symbol %>
+    <% @lookup_coins.each do |val| %>
+        <% if @symbol == val[1]["symbol"] %>
+            Symbol - <%= val[1]["symbol"] %><br>
+            Rank: <%= val[1]["rank"] %><br>
+            Price: <%= val[1]["quotes"]["USD"]["price"].round(2) %>
+        <% end %>
+    <% end %>
+<% end %>
