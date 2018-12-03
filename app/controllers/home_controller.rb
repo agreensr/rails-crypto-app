@@ -10,6 +10,8 @@ class HomeController < ApplicationController
    @coins = JSON.parse(@response)
    @coins = @coins["data"]
    
+   #render json: @coins
+   
    @my_coins = ["BTC", "XRP", "ADA", "XLM", "STEEM"]
    
   end
