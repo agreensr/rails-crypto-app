@@ -18,7 +18,8 @@ gem 'uglifier', '>= 1.3.0'
 
 gem 'jquery-rails'
 
-gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
+#gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
+gem 'materialize-sass', '~> 1.0.0'
 gem 'devise', '~> 4.5'
 
 # Output rails console object
