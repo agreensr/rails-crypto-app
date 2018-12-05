@@ -1,25 +1,28 @@
+<!-- Dropdown Structure -->
+<ul id="dropdown1" class="dropdown-content">
+  <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
+  <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
+</ul>
+<!-- Dropdown Structure END -->
+
 <nav>
   <div class="nav-wrapper">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="">
       <%= link_to "Crypto Portfolio", root_path, class: "brand-logo center" %>
     </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    
       <ul class="right hide-on-med-and-down">
         <li><%= link_to "Home", root_path %></li>
         <li><%= link_to "About", home_about_path %></li>
         <li><%= link_to "Look Up Coin", home_lookup_path %></li>
         
-        <% if user_signed_in? %>
-          <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
-          <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
+        <% if user_signed_in? %><!-- Materialize dropdown menu added jquery function. Links are above -->
+          <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Account<i class="material-icons right">arrow_drop_down</i></a></li>
         <% else %>
           <li><%= link_to "Sign Up", new_user_registration_path %></li>
           <li><%= link_to "Sign In", new_user_session_path %></li>
         <% end %>
       </ul>
-    </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
