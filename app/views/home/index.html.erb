@@ -8,9 +8,9 @@
 
 <% if @coins %>
     <% @coins.each do |val| %>
-        <%= val[1]["rank"] %> .
         <%= val[1]["name"] %> :
-        $<%= val[1]["quotes"]["USD"]["price"].round(2) %><br><br>
+        $<%= val[1]["quotes"]["USD"]["price"].round(2) %><br>
+        Rank: <%= val[1]["rank"] %><br><br>
     <% end %>
 <% end %>
 
